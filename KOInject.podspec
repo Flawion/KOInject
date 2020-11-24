@@ -2,7 +2,8 @@ Pod::Spec.new do |s|
   s.name = 'KOInject'
   s.version = '1.0'
 
-  s.summary = 'Simple and lightweight IoC container for Swift with iOS/macOS/watchOS/tvOS'
+  s.summary = 'Simple and lightweight IoC container for dependency injection in Swift with iOS/macOS/watchOS/tvOS'
+  s.description = 'Simple and lightweight IoC container, works on the register / resolve / dispose pattern with scopes of use and multiple arguments. It also supports lazy and isolated resolving.'
   s.homepage = 'https://github.com/Flawion/KOInject'
 
   s.license = 'MIT'
