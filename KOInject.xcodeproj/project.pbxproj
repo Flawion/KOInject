@@ -1,0 +1,1193 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0506E1362551F92A0033EAF9 /* KOILazyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1352551F92A0033EAF9 /* KOILazyResolver.swift */; };
+		0506E13A2551FB5D0033EAF9 /* KOILazyResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1392551FB5D0033EAF9 /* KOILazyResolverTests.swift */; };
+		0506E1402551FF6C0033EAF9 /* TestImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E13F2551FF6C0033EAF9 /* TestImplementations.swift */; };
+		0506E1492552051D0033EAF9 /* KOIContainerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1452552051A0033EAF9 /* KOIContainerProtocols.swift */; };
+		05487D58254CC69C0021FF77 /* KOInject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05487D4E254CC69C0021FF77 /* KOInject.framework */; };
+		05487D5D254CC69C0021FF77 /* KOIContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D5C254CC69C0021FF77 /* KOIContainerTests.swift */; };
+		05487D5F254CC69C0021FF77 /* KOInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05487D51254CC69C0021FF77 /* KOInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05487D71254CC8BB0021FF77 /* KOIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D70254CC8BB0021FF77 /* KOIContainer.swift */; };
+		05487D75254CDB820021FF77 /* KOIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D74254CDB820021FF77 /* KOIType.swift */; };
+		05487D79254CDB990021FF77 /* KOIEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D78254CDB990021FF77 /* KOIEntry.swift */; };
+		057F482125532DC2004AE454 /* KOIIsolatedResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F482025532DC2004AE454 /* KOIIsolatedResolverTests.swift */; };
+		057F482525532FCD004AE454 /* KOIIsolatedResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F482425532FCD004AE454 /* KOIIsolatedResolver.swift */; };
+		058F938B254F350B00D885DA /* KOIObjectStorageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058F938A254F350B00D885DA /* KOIObjectStorageItem.swift */; };
+		05909FD22557470500E09A64 /* KOInject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05909FC92557470400E09A64 /* KOInject.framework */; };
+		0590A0032557482000E09A64 /* KOIIsolatedResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F482025532DC2004AE454 /* KOIIsolatedResolverTests.swift */; };
+		0590A0042557482000E09A64 /* KOITypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A7B254ED8F6007717EE /* KOITypeTests.swift */; };
+		0590A0052557482000E09A64 /* TestImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E13F2551FF6C0033EAF9 /* TestImplementations.swift */; };
+		0590A0062557482000E09A64 /* KOIObjectStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A8D254EDCD6007717EE /* KOIObjectStorageTests.swift */; };
+		0590A0072557482000E09A64 /* KOIContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D5C254CC69C0021FF77 /* KOIContainerTests.swift */; };
+		0590A0082557482000E09A64 /* KOILazyResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1392551FB5D0033EAF9 /* KOILazyResolverTests.swift */; };
+		0590A0132557487700E09A64 /* KOIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D74254CDB820021FF77 /* KOIType.swift */; };
+		0590A0142557487700E09A64 /* KOIEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D78254CDB990021FF77 /* KOIEntry.swift */; };
+		0590A0152557487700E09A64 /* KOILazyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1352551F92A0033EAF9 /* KOILazyResolver.swift */; };
+		0590A0162557487700E09A64 /* KOIObjectStorageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058F938A254F350B00D885DA /* KOIObjectStorageItem.swift */; };
+		0590A0172557487700E09A64 /* KOIIsolatedResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F482425532FCD004AE454 /* KOIIsolatedResolver.swift */; };
+		0590A0182557487700E09A64 /* KOIObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A81254EDC14007717EE /* KOIObjectStorage.swift */; };
+		0590A0192557487700E09A64 /* KOIContainerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1452552051A0033EAF9 /* KOIContainerProtocols.swift */; };
+		0590A01A2557487700E09A64 /* KOIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D70254CC8BB0021FF77 /* KOIContainer.swift */; };
+		0590A0382557495500E09A64 /* KOInject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0590A02F2557495500E09A64 /* KOInject.framework */; };
+		0590A054255749E400E09A64 /* KOIContainerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1452552051A0033EAF9 /* KOIContainerProtocols.swift */; };
+		0590A055255749E400E09A64 /* KOIObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A81254EDC14007717EE /* KOIObjectStorage.swift */; };
+		0590A056255749E400E09A64 /* KOIObjectStorageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058F938A254F350B00D885DA /* KOIObjectStorageItem.swift */; };
+		0590A057255749E400E09A64 /* KOIEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D78254CDB990021FF77 /* KOIEntry.swift */; };
+		0590A058255749E400E09A64 /* KOIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D74254CDB820021FF77 /* KOIType.swift */; };
+		0590A059255749E400E09A64 /* KOIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D70254CC8BB0021FF77 /* KOIContainer.swift */; };
+		0590A05A255749E400E09A64 /* KOILazyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1352551F92A0033EAF9 /* KOILazyResolver.swift */; };
+		0590A05B255749E400E09A64 /* KOIIsolatedResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F482425532FCD004AE454 /* KOIIsolatedResolver.swift */; };
+		0590A063255749F000E09A64 /* KOILazyResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1392551FB5D0033EAF9 /* KOILazyResolverTests.swift */; };
+		0590A064255749F000E09A64 /* KOIIsolatedResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F482025532DC2004AE454 /* KOIIsolatedResolverTests.swift */; };
+		0590A065255749F000E09A64 /* KOITypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A7B254ED8F6007717EE /* KOITypeTests.swift */; };
+		0590A066255749F000E09A64 /* KOIObjectStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A8D254EDCD6007717EE /* KOIObjectStorageTests.swift */; };
+		0590A067255749F000E09A64 /* TestImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E13F2551FF6C0033EAF9 /* TestImplementations.swift */; };
+		0590A068255749F000E09A64 /* KOIContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D5C254CC69C0021FF77 /* KOIContainerTests.swift */; };
+		0590A09325574D9D00E09A64 /* KOInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05487D51254CC69C0021FF77 /* KOInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0590A09425574D9E00E09A64 /* KOInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05487D51254CC69C0021FF77 /* KOInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0590A09C25574D9E00E09A64 /* KOInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05487D51254CC69C0021FF77 /* KOInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05AC5A7C254ED8F6007717EE /* KOITypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A7B254ED8F6007717EE /* KOITypeTests.swift */; };
+		05AC5A82254EDC14007717EE /* KOIObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A81254EDC14007717EE /* KOIObjectStorage.swift */; };
+		05AC5A8E254EDCD6007717EE /* KOIObjectStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A8D254EDCD6007717EE /* KOIObjectStorageTests.swift */; };
+		05CE4ABF2554AE4600730843 /* KOILazyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1352551F92A0033EAF9 /* KOILazyResolver.swift */; };
+		05CE4AC02554AE4600730843 /* KOIContainerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E1452552051A0033EAF9 /* KOIContainerProtocols.swift */; };
+		05CE4AC12554AE4600730843 /* KOIObjectStorageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058F938A254F350B00D885DA /* KOIObjectStorageItem.swift */; };
+		05CE4AC22554AE4600730843 /* KOIEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D78254CDB990021FF77 /* KOIEntry.swift */; };
+		05CE4AC32554AE4600730843 /* KOIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D70254CC8BB0021FF77 /* KOIContainer.swift */; };
+		05CE4AC42554AE4600730843 /* KOIObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AC5A81254EDC14007717EE /* KOIObjectStorage.swift */; };
+		05CE4AC52554AE4600730843 /* KOIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05487D74254CDB820021FF77 /* KOIType.swift */; };
+		05CE4AC62554AE4600730843 /* KOIIsolatedResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057F482425532FCD004AE454 /* KOIIsolatedResolver.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05487D59254CC69C0021FF77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05487D45254CC69C0021FF77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05487D4D254CC69C0021FF77;
+			remoteInfo = KOIOCContainer;
+		};
+		05909FD32557470500E09A64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05487D45254CC69C0021FF77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05909FC82557470400E09A64;
+			remoteInfo = KOInject_macOS;
+		};
+		0590A0392557495500E09A64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05487D45254CC69C0021FF77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0590A02E2557495500E09A64;
+			remoteInfo = KOInject_tvOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0506E1352551F92A0033EAF9 /* KOILazyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOILazyResolver.swift; sourceTree = "<group>"; };
+		0506E1392551FB5D0033EAF9 /* KOILazyResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOILazyResolverTests.swift; sourceTree = "<group>"; };
+		0506E13F2551FF6C0033EAF9 /* TestImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImplementations.swift; sourceTree = "<group>"; };
+		0506E1452552051A0033EAF9 /* KOIContainerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIContainerProtocols.swift; sourceTree = "<group>"; };
+		05487D4E254CC69C0021FF77 /* KOInject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KOInject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05487D51254CC69C0021FF77 /* KOInject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KOInject.h; sourceTree = "<group>"; };
+		05487D52254CC69C0021FF77 /* Info_iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
+		05487D57254CC69C0021FF77 /* KOInjectTests_iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOInjectTests_iOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05487D5C254CC69C0021FF77 /* KOIContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIContainerTests.swift; sourceTree = "<group>"; };
+		05487D5E254CC69C0021FF77 /* Info_iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
+		05487D70254CC8BB0021FF77 /* KOIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIContainer.swift; sourceTree = "<group>"; };
+		05487D74254CDB820021FF77 /* KOIType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIType.swift; sourceTree = "<group>"; };
+		05487D78254CDB990021FF77 /* KOIEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIEntry.swift; sourceTree = "<group>"; };
+		057F482025532DC2004AE454 /* KOIIsolatedResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIIsolatedResolverTests.swift; sourceTree = "<group>"; };
+		057F482425532FCD004AE454 /* KOIIsolatedResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIIsolatedResolver.swift; sourceTree = "<group>"; };
+		058F938A254F350B00D885DA /* KOIObjectStorageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIObjectStorageItem.swift; sourceTree = "<group>"; };
+		05909FC92557470400E09A64 /* KOInject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KOInject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05909FCC2557470400E09A64 /* Info_macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_macOS.plist; sourceTree = "<group>"; };
+		05909FD12557470500E09A64 /* KOInjectTests_macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOInjectTests_macOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05909FD82557470500E09A64 /* Info_macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_macOS.plist; sourceTree = "<group>"; };
+		0590A02F2557495500E09A64 /* KOInject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KOInject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0590A0322557495500E09A64 /* Info_tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_tvOS.plist; sourceTree = "<group>"; };
+		0590A0372557495500E09A64 /* KOInjectTests_tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOInjectTests_tvOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0590A03E2557495500E09A64 /* Info_tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_tvOS.plist; sourceTree = "<group>"; };
+		0590A0B92557504700E09A64 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		0590A0D325575A4A00E09A64 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0590A0D425575A5600E09A64 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0590A0F62557605900E09A64 /* KOInject.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = KOInject.podspec; sourceTree = "<group>"; };
+		05AC5A7B254ED8F6007717EE /* KOITypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOITypeTests.swift; sourceTree = "<group>"; };
+		05AC5A81254EDC14007717EE /* KOIObjectStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIObjectStorage.swift; sourceTree = "<group>"; };
+		05AC5A8D254EDCD6007717EE /* KOIObjectStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOIObjectStorageTests.swift; sourceTree = "<group>"; };
+		05CE4AB12554AC6200730843 /* KOInject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KOInject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CE4AB42554AC6300730843 /* Info_watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_watchOS.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05487D4B254CC69C0021FF77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05487D54254CC69C0021FF77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05487D58254CC69C0021FF77 /* KOInject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05909FC62557470400E09A64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05909FCE2557470500E09A64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05909FD22557470500E09A64 /* KOInject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0590A02C2557495500E09A64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0590A0342557495500E09A64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0590A0382557495500E09A64 /* KOInject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CE4AAE2554AC6200730843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05487D44254CC69C0021FF77 = {
+			isa = PBXGroup;
+			children = (
+				0590A0EE2557602E00E09A64 /* Deployment */,
+				05487D50254CC69C0021FF77 /* Sources */,
+				05487D5B254CC69C0021FF77 /* Tests */,
+				05487D4F254CC69C0021FF77 /* Products */,
+				05CE4AFE2554B19800730843 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		05487D4F254CC69C0021FF77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05487D4E254CC69C0021FF77 /* KOInject.framework */,
+				05487D57254CC69C0021FF77 /* KOInjectTests_iOS.xctest */,
+				05CE4AB12554AC6200730843 /* KOInject.framework */,
+				05909FC92557470400E09A64 /* KOInject.framework */,
+				05909FD12557470500E09A64 /* KOInjectTests_macOS.xctest */,
+				0590A02F2557495500E09A64 /* KOInject.framework */,
+				0590A0372557495500E09A64 /* KOInjectTests_tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05487D50254CC69C0021FF77 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				05487D51254CC69C0021FF77 /* KOInject.h */,
+				05487D52254CC69C0021FF77 /* Info_iOS.plist */,
+				05909FCC2557470400E09A64 /* Info_macOS.plist */,
+				05CE4AB42554AC6300730843 /* Info_watchOS.plist */,
+				0590A0322557495500E09A64 /* Info_tvOS.plist */,
+				05487D74254CDB820021FF77 /* KOIType.swift */,
+				05487D78254CDB990021FF77 /* KOIEntry.swift */,
+				0506E1452552051A0033EAF9 /* KOIContainerProtocols.swift */,
+				05487D70254CC8BB0021FF77 /* KOIContainer.swift */,
+				05AC5A81254EDC14007717EE /* KOIObjectStorage.swift */,
+				058F938A254F350B00D885DA /* KOIObjectStorageItem.swift */,
+				0506E1352551F92A0033EAF9 /* KOILazyResolver.swift */,
+				057F482425532FCD004AE454 /* KOIIsolatedResolver.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		05487D5B254CC69C0021FF77 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				05487D5E254CC69C0021FF77 /* Info_iOS.plist */,
+				05909FD82557470500E09A64 /* Info_macOS.plist */,
+				0590A03E2557495500E09A64 /* Info_tvOS.plist */,
+				05487D5C254CC69C0021FF77 /* KOIContainerTests.swift */,
+				0506E1392551FB5D0033EAF9 /* KOILazyResolverTests.swift */,
+				057F482025532DC2004AE454 /* KOIIsolatedResolverTests.swift */,
+				05AC5A7B254ED8F6007717EE /* KOITypeTests.swift */,
+				05AC5A8D254EDCD6007717EE /* KOIObjectStorageTests.swift */,
+				0506E13F2551FF6C0033EAF9 /* TestImplementations.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0590A0EE2557602E00E09A64 /* Deployment */ = {
+			isa = PBXGroup;
+			children = (
+				0590A0F62557605900E09A64 /* KOInject.podspec */,
+				0590A0B92557504700E09A64 /* Package.swift */,
+				0590A0D425575A5600E09A64 /* LICENSE */,
+				0590A0D325575A4A00E09A64 /* README.md */,
+			);
+			name = Deployment;
+			sourceTree = "<group>";
+		};
+		05CE4AFE2554B19800730843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		05487D49254CC69C0021FF77 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05487D5F254CC69C0021FF77 /* KOInject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05909FC42557470400E09A64 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0590A09325574D9D00E09A64 /* KOInject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0590A02A2557495500E09A64 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0590A09C25574D9E00E09A64 /* KOInject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CE4AAC2554AC6200730843 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0590A09425574D9E00E09A64 /* KOInject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		05487D4D254CC69C0021FF77 /* KOInject_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05487D62254CC69C0021FF77 /* Build configuration list for PBXNativeTarget "KOInject_iOS" */;
+			buildPhases = (
+				05487D49254CC69C0021FF77 /* Headers */,
+				05487D4A254CC69C0021FF77 /* Sources */,
+				05487D4B254CC69C0021FF77 /* Frameworks */,
+				05487D4C254CC69C0021FF77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KOInject_iOS;
+			productName = KOIOCContainer;
+			productReference = 05487D4E254CC69C0021FF77 /* KOInject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		05487D56254CC69C0021FF77 /* KOInjectTests_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05487D65254CC69C0021FF77 /* Build configuration list for PBXNativeTarget "KOInjectTests_iOS" */;
+			buildPhases = (
+				05487D53254CC69C0021FF77 /* Sources */,
+				05487D54254CC69C0021FF77 /* Frameworks */,
+				05487D55254CC69C0021FF77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05487D5A254CC69C0021FF77 /* PBXTargetDependency */,
+			);
+			name = KOInjectTests_iOS;
+			productName = KOIOCContainerTests;
+			productReference = 05487D57254CC69C0021FF77 /* KOInjectTests_iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		05909FC82557470400E09A64 /* KOInject_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05909FDA2557470500E09A64 /* Build configuration list for PBXNativeTarget "KOInject_macOS" */;
+			buildPhases = (
+				05909FC42557470400E09A64 /* Headers */,
+				05909FC52557470400E09A64 /* Sources */,
+				05909FC62557470400E09A64 /* Frameworks */,
+				05909FC72557470400E09A64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KOInject_macOS;
+			productName = KOInject_macOS;
+			productReference = 05909FC92557470400E09A64 /* KOInject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		05909FD02557470500E09A64 /* KOInjectTests_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05909FDD2557470500E09A64 /* Build configuration list for PBXNativeTarget "KOInjectTests_macOS" */;
+			buildPhases = (
+				05909FCD2557470500E09A64 /* Sources */,
+				05909FCE2557470500E09A64 /* Frameworks */,
+				05909FCF2557470500E09A64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05909FD42557470500E09A64 /* PBXTargetDependency */,
+			);
+			name = KOInjectTests_macOS;
+			productName = KOInject_macOSTests;
+			productReference = 05909FD12557470500E09A64 /* KOInjectTests_macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0590A02E2557495500E09A64 /* KOInject_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0590A0402557495500E09A64 /* Build configuration list for PBXNativeTarget "KOInject_tvOS" */;
+			buildPhases = (
+				0590A02A2557495500E09A64 /* Headers */,
+				0590A02B2557495500E09A64 /* Sources */,
+				0590A02C2557495500E09A64 /* Frameworks */,
+				0590A02D2557495500E09A64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KOInject_tvOS;
+			productName = KOInject_tvOS;
+			productReference = 0590A02F2557495500E09A64 /* KOInject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0590A0362557495500E09A64 /* KOInjectTests_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0590A0432557495500E09A64 /* Build configuration list for PBXNativeTarget "KOInjectTests_tvOS" */;
+			buildPhases = (
+				0590A0332557495500E09A64 /* Sources */,
+				0590A0342557495500E09A64 /* Frameworks */,
+				0590A0352557495500E09A64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0590A03A2557495500E09A64 /* PBXTargetDependency */,
+			);
+			name = KOInjectTests_tvOS;
+			productName = KOInject_tvOSTests;
+			productReference = 0590A0372557495500E09A64 /* KOInjectTests_tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		05CE4AB02554AC6200730843 /* KOInject_watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05CE4AB62554AC6300730843 /* Build configuration list for PBXNativeTarget "KOInject_watchOS" */;
+			buildPhases = (
+				05CE4AAC2554AC6200730843 /* Headers */,
+				05CE4AAD2554AC6200730843 /* Sources */,
+				05CE4AAE2554AC6200730843 /* Frameworks */,
+				05CE4AAF2554AC6200730843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KOInject_watchOS;
+			productName = "KOInject-watchOS";
+			productReference = 05CE4AB12554AC6200730843 /* KOInject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05487D45254CC69C0021FF77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					05487D4D254CC69C0021FF77 = {
+						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
+					};
+					05487D56254CC69C0021FF77 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					05909FC82557470400E09A64 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					05909FD02557470500E09A64 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					0590A02E2557495500E09A64 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					0590A0362557495500E09A64 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					05CE4AB02554AC6200730843 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 05487D48254CC69C0021FF77 /* Build configuration list for PBXProject "KOInject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05487D44254CC69C0021FF77;
+			productRefGroup = 05487D4F254CC69C0021FF77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05487D4D254CC69C0021FF77 /* KOInject_iOS */,
+				05909FC82557470400E09A64 /* KOInject_macOS */,
+				05CE4AB02554AC6200730843 /* KOInject_watchOS */,
+				0590A02E2557495500E09A64 /* KOInject_tvOS */,
+				05487D56254CC69C0021FF77 /* KOInjectTests_iOS */,
+				05909FD02557470500E09A64 /* KOInjectTests_macOS */,
+				0590A0362557495500E09A64 /* KOInjectTests_tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05487D4C254CC69C0021FF77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05487D55254CC69C0021FF77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05909FC72557470400E09A64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05909FCF2557470500E09A64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0590A02D2557495500E09A64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0590A0352557495500E09A64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CE4AAF2554AC6200730843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05487D4A254CC69C0021FF77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05487D71254CC8BB0021FF77 /* KOIContainer.swift in Sources */,
+				05487D79254CDB990021FF77 /* KOIEntry.swift in Sources */,
+				05AC5A82254EDC14007717EE /* KOIObjectStorage.swift in Sources */,
+				0506E1362551F92A0033EAF9 /* KOILazyResolver.swift in Sources */,
+				05487D75254CDB820021FF77 /* KOIType.swift in Sources */,
+				058F938B254F350B00D885DA /* KOIObjectStorageItem.swift in Sources */,
+				057F482525532FCD004AE454 /* KOIIsolatedResolver.swift in Sources */,
+				0506E1492552051D0033EAF9 /* KOIContainerProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05487D53254CC69C0021FF77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057F482125532DC2004AE454 /* KOIIsolatedResolverTests.swift in Sources */,
+				05487D5D254CC69C0021FF77 /* KOIContainerTests.swift in Sources */,
+				0506E13A2551FB5D0033EAF9 /* KOILazyResolverTests.swift in Sources */,
+				0506E1402551FF6C0033EAF9 /* TestImplementations.swift in Sources */,
+				05AC5A7C254ED8F6007717EE /* KOITypeTests.swift in Sources */,
+				05AC5A8E254EDCD6007717EE /* KOIObjectStorageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05909FC52557470400E09A64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0590A0182557487700E09A64 /* KOIObjectStorage.swift in Sources */,
+				0590A0152557487700E09A64 /* KOILazyResolver.swift in Sources */,
+				0590A0142557487700E09A64 /* KOIEntry.swift in Sources */,
+				0590A01A2557487700E09A64 /* KOIContainer.swift in Sources */,
+				0590A0132557487700E09A64 /* KOIType.swift in Sources */,
+				0590A0162557487700E09A64 /* KOIObjectStorageItem.swift in Sources */,
+				0590A0172557487700E09A64 /* KOIIsolatedResolver.swift in Sources */,
+				0590A0192557487700E09A64 /* KOIContainerProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05909FCD2557470500E09A64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0590A0062557482000E09A64 /* KOIObjectStorageTests.swift in Sources */,
+				0590A0032557482000E09A64 /* KOIIsolatedResolverTests.swift in Sources */,
+				0590A0042557482000E09A64 /* KOITypeTests.swift in Sources */,
+				0590A0082557482000E09A64 /* KOILazyResolverTests.swift in Sources */,
+				0590A0052557482000E09A64 /* TestImplementations.swift in Sources */,
+				0590A0072557482000E09A64 /* KOIContainerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0590A02B2557495500E09A64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0590A055255749E400E09A64 /* KOIObjectStorage.swift in Sources */,
+				0590A059255749E400E09A64 /* KOIContainer.swift in Sources */,
+				0590A056255749E400E09A64 /* KOIObjectStorageItem.swift in Sources */,
+				0590A057255749E400E09A64 /* KOIEntry.swift in Sources */,
+				0590A058255749E400E09A64 /* KOIType.swift in Sources */,
+				0590A054255749E400E09A64 /* KOIContainerProtocols.swift in Sources */,
+				0590A05B255749E400E09A64 /* KOIIsolatedResolver.swift in Sources */,
+				0590A05A255749E400E09A64 /* KOILazyResolver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0590A0332557495500E09A64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0590A066255749F000E09A64 /* KOIObjectStorageTests.swift in Sources */,
+				0590A064255749F000E09A64 /* KOIIsolatedResolverTests.swift in Sources */,
+				0590A067255749F000E09A64 /* TestImplementations.swift in Sources */,
+				0590A065255749F000E09A64 /* KOITypeTests.swift in Sources */,
+				0590A063255749F000E09A64 /* KOILazyResolverTests.swift in Sources */,
+				0590A068255749F000E09A64 /* KOIContainerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CE4AAD2554AC6200730843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CE4AC42554AE4600730843 /* KOIObjectStorage.swift in Sources */,
+				05CE4ABF2554AE4600730843 /* KOILazyResolver.swift in Sources */,
+				05CE4AC12554AE4600730843 /* KOIObjectStorageItem.swift in Sources */,
+				05CE4AC22554AE4600730843 /* KOIEntry.swift in Sources */,
+				05CE4AC32554AE4600730843 /* KOIContainer.swift in Sources */,
+				05CE4AC52554AE4600730843 /* KOIType.swift in Sources */,
+				05CE4AC62554AE4600730843 /* KOIIsolatedResolver.swift in Sources */,
+				05CE4AC02554AE4600730843 /* KOIContainerProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05487D5A254CC69C0021FF77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05487D4D254CC69C0021FF77 /* KOInject_iOS */;
+			targetProxy = 05487D59254CC69C0021FF77 /* PBXContainerItemProxy */;
+		};
+		05909FD42557470500E09A64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05909FC82557470400E09A64 /* KOInject_macOS */;
+			targetProxy = 05909FD32557470500E09A64 /* PBXContainerItemProxy */;
+		};
+		0590A03A2557495500E09A64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0590A02E2557495500E09A64 /* KOInject_tvOS */;
+			targetProxy = 0590A0392557495500E09A64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05487D60254CC69C0021FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		05487D61254CC69C0021FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		05487D63254CC69C0021FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info_iOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05487D64254CC69C0021FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info_iOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		05487D66254CC69C0021FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				INFOPLIST_FILE = Tests/Info_iOS.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.KO.KOITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05487D67254CC69C0021FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				INFOPLIST_FILE = Tests/Info_iOS.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.KO.KOITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		05909FDB2557470500E09A64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info_macOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		05909FDC2557470500E09A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info_macOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		05909FDE2557470500E09A64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				INFOPLIST_FILE = Tests/Info_macOS.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.KOInject-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		05909FDF2557470500E09A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				INFOPLIST_FILE = Tests/Info_macOS.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.KOInject-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0590A0412557495500E09A64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info_tvOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		0590A0422557495500E09A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info_tvOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		0590A0442557495500E09A64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				INFOPLIST_FILE = Tests/Info_tvOS.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.KOInject-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Debug;
+		};
+		0590A0452557495500E09A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				INFOPLIST_FILE = Tests/Info_tvOS.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.KOInject-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Release;
+		};
+		05CE4AB72554AC6300730843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info_watchOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		05CE4AB82554AC6300730843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DRL7VLCH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info_watchOS.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.KO.$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05487D48254CC69C0021FF77 /* Build configuration list for PBXProject "KOInject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05487D60254CC69C0021FF77 /* Debug */,
+				05487D61254CC69C0021FF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05487D62254CC69C0021FF77 /* Build configuration list for PBXNativeTarget "KOInject_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05487D63254CC69C0021FF77 /* Debug */,
+				05487D64254CC69C0021FF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05487D65254CC69C0021FF77 /* Build configuration list for PBXNativeTarget "KOInjectTests_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05487D66254CC69C0021FF77 /* Debug */,
+				05487D67254CC69C0021FF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05909FDA2557470500E09A64 /* Build configuration list for PBXNativeTarget "KOInject_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05909FDB2557470500E09A64 /* Debug */,
+				05909FDC2557470500E09A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05909FDD2557470500E09A64 /* Build configuration list for PBXNativeTarget "KOInjectTests_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05909FDE2557470500E09A64 /* Debug */,
+				05909FDF2557470500E09A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0590A0402557495500E09A64 /* Build configuration list for PBXNativeTarget "KOInject_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0590A0412557495500E09A64 /* Debug */,
+				0590A0422557495500E09A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0590A0432557495500E09A64 /* Build configuration list for PBXNativeTarget "KOInjectTests_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0590A0442557495500E09A64 /* Debug */,
+				0590A0452557495500E09A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05CE4AB62554AC6300730843 /* Build configuration list for PBXNativeTarget "KOInject_watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CE4AB72554AC6300730843 /* Debug */,
+				05CE4AB82554AC6300730843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05487D45254CC69C0021FF77 /* Project object */;
+}
