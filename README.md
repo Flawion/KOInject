@@ -42,6 +42,39 @@ Install the pods by running
 pod install
 ```
 
+### Swift Package Manager
+
+Click File -> Add Packages -> enter [KOInject repo's URL](https://github.com/Flawion/KOInject.git), then click Add Package.
+
+You could always add dependency manually in Package.swift, like below:
+
+```
+let package = Package(
+    name: "SomePackage",
+    platforms: [.iOS(.v11)],
+    products: [
+        .library(
+            name: "YourLib",
+            targets: ["YourLib"]
+        )
+    ],
+    // here we declare dependency that we want to add
+    dependencies: [
+        .package(
+            url: "https://github.com/Flawion/KOInject.git",
+            from: "1.0.2"
+        )
+    ]
+    targets: [
+        // target where we use our dependency
+        .target(
+            name: "YourLib",
+            dependencies: ["KOInject"]
+        )
+    ]
+)
+```
+
 ### Manually
 
 You can use KOInject manually and change it how you like. One of the simplest way to do that.
