@@ -23,7 +23,7 @@ KOInject doesn't contains any external dependencies. If you want to stay updated
 
 Add below entry to the target in Podfile
 ```
-pod 'KOInject', '~> 1.0'
+pod 'KOInject', '~> 2.0'
 ```
 
 For example
@@ -33,7 +33,7 @@ platform :ios, '11.0'
 use_frameworks!
 
 target 'Target Name' do
-pod 'KOInject', '~> 1.0'
+pod 'KOInject', '~> 2.0'
 end
 ```
 Install the pods by running
@@ -62,7 +62,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/Flawion/KOInject.git",
-            from: "1.0.2"
+            from: "2.0.0"
         )
     ]
     targets: [
@@ -99,17 +99,17 @@ import KOInject
 
 ```swift
 let container = KOIContainer()
-container.register(forType: ApiClientProtocol.self) { _ in
+container.register(type: ApiClientProtocol.self) { _ in
     ApiClient()
 }
-container.register(forType: DataStorageProtocol.self) { _ in
+container.register(type: DataStorageProtocol.self) { _ in
     DataStorage()
 }
 ```
 Fell free to add multiple arguments, so register can look like that.
 
 ```swift
-container.register(forType: DataStorageProtocol.self) { _, rootPath, clearOnDispose in
+container.register(type: DataStorageProtocol.self) { _, rootPath, clearOnDispose in
     DataStorage(rootPath: rootPath, clearOnDispose: clearOnDispose)
 }
 ```
@@ -117,10 +117,10 @@ container.register(forType: DataStorageProtocol.self) { _, rootPath, clearOnDisp
 The first argument is type of KOIResolverProtocol, so you can resolve another dependencies that you need to create new object.
 
 ```swift
-container.register(forType: GameDetailsViewModelProtocol.self, scope: .separate) { (resolver, game: GameModel) in
+container.register(type: GameDetailsViewModelProtocol.self, scope: .separate) { (resolver, game: GameModel) in
     GameDetailsViewModel(apiClient: resolver.resolve()!, game: game)
 }
-container.register(forType: GameDetailsViewControllerProtocol.self, scope: .separate) { (resolver, game: GameModel) in
+container.register(type: GameDetailsViewControllerProtocol.self, scope: .separate) { (resolver, game: GameModel) in
     GameDetailsViewController(viewModel: resolver.resolve(arg1: game)!)
 }
 ```
@@ -158,7 +158,7 @@ final class ObjectIdentifiable: ObjectIdentifiableProtocol, Identifiable {
 }
 // ...
 
-container.register(forType: ObjectIdentifiableProtocol.self) { _ in
+container.register(type: ObjectIdentifiableProtocol.self) { _ in
     ObjectIdentifiable()
 }
 let object: ObjectIdentifiableProtocol? = container.resolve()
@@ -168,7 +168,7 @@ print(object?.id == object2?.id) // prints true
 2) weakShared - Works like shared, but when there will be no strong reference the object will be deleted.
 
 ```swift
-container.register(forType: ObjectIdentifiableProtocol.self, scope: .weakShared) { _ in
+container.register(type: ObjectIdentifiableProtocol.self, scope: .weakShared) { _ in
     ObjectIdentifiable()
 }
 var object: ObjectIdentifiableProtocol? = container.resolve()
@@ -190,7 +190,7 @@ print(objectId == objectId3) // prints false
 3) separate - Every time resolve will return the new object.
 
 ```swift
-container.register(forType: ObjectIdentifiableProtocol.self, scope: .separate) { _ in
+container.register(type: ObjectIdentifiableProtocol.self, scope: .separate) { _ in
     ObjectIdentifiable()
 }
 let object: ObjectIdentifiableProtocol? = container.resolve()
@@ -205,11 +205,11 @@ In some situation we don't want to keep the object always alive. Injecting an op
 ```swift
 // register dependencies
 let container = KOIContainer()
-container.register(forType: DataBaseClientProtocol.self) { (_, rootPath: String) in
+container.register(type: DataBaseClientProtocol.self) { (_, rootPath: String) in
     DataBaseClient(rootPath: rootPath)
 }
-container.register(forType: ViewModelProtocol.self, scope: .separate) { (resolver, rootPath: String) in
-    let dataBaseLazyResolver = KOILazyResolverArg1(resolver: resolver, forType: DataBaseClientProtocol.self, arg1: rootPath) // create lazy Resolver
+container.register(type: ViewModelProtocol.self, scope: .separate) { (resolver, rootPath: String) in
+    let dataBaseLazyResolver = KOILazyResolverArg1(resolver: resolver, type: DataBaseClientProtocol.self, arg1: rootPath) // create lazy Resolver
     return ViewModel(dataBaseLazyResolver: dataBaseLazyResolver) // inject it!
 }
 // ...
@@ -237,12 +237,12 @@ When we operate with transactions we should have very limited access to them. Wi
 ```swift
 // register dependencies
 let container = KOIContainer()
-container.register(forType: UserBillingProtocol.self, scope: .weakShared) { (_, userId: String) in
+container.register(type: UserBillingProtocol.self, scope: .weakShared) { (_, userId: String) in
     UserBilling(userId: userId)
 }
-container.register(forType: ViewModelProtocol.self, scope: .separate) { (resolver, userId: String) in
+container.register(type: ViewModelProtocol.self, scope: .separate) { (resolver, userId: String) in
     // create lazy and isolated resolvers
-    let lazyResolver = KOILazyResolverArg1(resolver: resolver, forType: UserBillingProtocol.self, arg1: userId)
+    let lazyResolver = KOILazyResolverArg1(resolver: resolver, type: UserBillingProtocol.self, arg1: userId)
     let isolatedResolver = KOIIsolatedResolver(lazyResolver: lazyResolver)
     return ViewModel(userBillingIsolatedResolver: isolatedResolver)
 }

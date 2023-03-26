@@ -25,10 +25,10 @@ final class KOIObjectStorageTests: XCTestCase {
     func testResolveSharedEntry() {
         let type = KOIType(type: TestProtocol.self)
         let entry = KOIEntry(scope: .shared) { (resolver: KOIResolverProtocol) -> TestProtocol in
-            return TestImplementation()
+            TestImplementation()
         }
         let createFunc = { () -> TestProtocol in
-            return entry.fabric(self.container)
+            entry.fabric(self.container)
         }
         
         let object1 = objectStorage.object(type: type, inScope: entry.scope, createFunc: createFunc)  as? TestImplementation
@@ -46,7 +46,7 @@ final class KOIObjectStorageTests: XCTestCase {
         }
         let arg1 = "testArg1"
         let createFunc = { () -> TestProtocol in
-            return entry.fabric(self.container, arg1)
+            entry.fabric(self.container, arg1)
         }
 
         let object1 = objectStorage.object(type: type, inScope: entry.scope, createFunc: createFunc)  as? TestImplementationArgs1
@@ -62,7 +62,7 @@ final class KOIObjectStorageTests: XCTestCase {
         let type = KOIType(type: TestProtocol.self)
         let arg = "testArg"
         let entry = KOIEntry(scope: .weakShared) { (resolver: KOIResolverProtocol, arg1: String) -> TestProtocol in
-            return TestImplementationArgs1(arg1: arg1)
+            TestImplementationArgs1(arg1: arg1)
         }
         var createFuncRunCounter: Int = 0
         let createFunc = { () -> TestProtocol in
@@ -90,10 +90,10 @@ final class KOIObjectStorageTests: XCTestCase {
     func testResolveSeparateEntry() {
         let type = KOIType(type: TestProtocol.self)
         let entry = KOIEntry(scope: .separate) { (resolver: KOIResolverProtocol) -> TestProtocol in
-            return TestImplementation()
+            TestImplementation()
         }
         let createFunc = { () -> TestProtocol in
-            return entry.fabric(self.container)
+            entry.fabric(self.container)
         }
 
         let object1 = objectStorage.object(type: type, inScope: entry.scope, createFunc: createFunc)  as? TestImplementation
@@ -108,10 +108,10 @@ final class KOIObjectStorageTests: XCTestCase {
         let type = KOIType(type: TestProtocol.self, arg1Type: String.self)
         let arg1 = "testArg1"
         let entry = KOIEntry(scope: .separate) { (resolver: KOIResolverProtocol, arg1: String) -> TestProtocol in
-            return TestImplementationArgs1(arg1: arg1)
+            TestImplementationArgs1(arg1: arg1)
         }
         let createFunc = { () -> TestProtocol in
-            return entry.fabric(self.container, arg1)
+            entry.fabric(self.container, arg1)
         }
         
         let object1 = objectStorage.object(type: type, inScope: entry.scope, createFunc: createFunc)  as? TestImplementationArgs1

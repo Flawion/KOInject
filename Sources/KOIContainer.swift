@@ -17,52 +17,52 @@ public final class KOIContainer {
 
 // MARK: - KOIRegisterProtocol
 extension KOIContainer: KOIRegisterProtocol {
-    public func register<RegisterType>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol) -> RegisterType) {
+    public func register<RegisterType>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, entry: entryForType)
     }
 
-    public func register<RegisterType, Arg1Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, entry: entryForType)
     }
     
-    public func register<RegisterType, Arg1Type, Arg2Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type, Arg2Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, arg2Type: Arg2Type.self, entry: entryForType)
     }
     
-    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, arg2Type: Arg2Type.self, arg3Type: Arg3Type.self, entry: entryForType)
     }
     
-    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, arg2Type: Arg2Type.self, arg3Type: Arg3Type.self, arg4Type: Arg4Type.self, entry: entryForType)
     }
     
-    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, arg2Type: Arg2Type.self, arg3Type: Arg3Type.self, arg4Type: Arg4Type.self, arg5Type: Arg5Type.self, entry: entryForType)
     }
     
-    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, arg2Type: Arg2Type.self, arg3Type: Arg3Type.self, arg4Type: Arg4Type.self, arg5Type: Arg5Type.self, arg6Type: Arg6Type.self, entry: entryForType)
     }
     
-    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, arg2Type: Arg2Type.self, arg3Type: Arg3Type.self, arg4Type: Arg4Type.self, arg5Type: Arg5Type.self, arg6Type: Arg6Type.self, arg7Type: Arg7Type.self, entry: entryForType)
     }
     
-    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type, Arg8Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type, Arg8Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type, Arg8Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type, Arg8Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, arg2Type: Arg2Type.self, arg3Type: Arg3Type.self, arg4Type: Arg4Type.self, arg5Type: Arg5Type.self, arg6Type: Arg6Type.self, arg7Type: Arg7Type.self, arg8Type: Arg8Type.self, entry: entryForType)
     }
     
-    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type, Arg8Type, Arg9Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type, Arg8Type, Arg9Type) -> RegisterType) {
+    public func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type, Arg8Type, Arg9Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes = .shared, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type, Arg7Type, Arg8Type, Arg9Type) -> RegisterType) {
         let entryForType = KOIEntry(scope: scope, fabric: fabric)
         register(type: RegisterType.self, arg1Type: Arg1Type.self, arg2Type: Arg2Type.self, arg3Type: Arg3Type.self, arg4Type: Arg4Type.self, arg5Type: Arg5Type.self, arg6Type: Arg6Type.self, arg7Type: Arg7Type.self, arg8Type: Arg8Type.self, arg9Type: Arg9Type.self, entry: entryForType)
     }
@@ -83,7 +83,7 @@ extension KOIContainer: KOIRegisterProtocol {
                                      arg4Type: arg4Type, arg5Type: arg5Type, arg6Type: arg6Type, arg7Type: arg7Type,
                                      arg8Type: arg8Type, arg9Type: arg9Type)
         entryForTypes[typeToRegister] = entry
-        objectStorage.removeCache(forType: typeToRegister)
+        objectStorage.removeCache(for: typeToRegister)
     }
     
     private func forceTypeOrNil(fromOptional optionalType: Any.Type?) -> Any.Type? {

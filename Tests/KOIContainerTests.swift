@@ -11,30 +11,32 @@ import XCTest
 final class KOIContainerTests: XCTestCase {
     private var container: KOIContainer!
     
-    override func setUpWithError() throws {
+    override func setUp() {
+        super.setUp()
         container = KOIContainer()
     }
     
-    override func tearDownWithError() throws {
+    override func tearDown() {
+        super.tearDown()
         container = nil
     }
     
     func testRegister() {
-        container.register(forType: TestProtocol.self, fabric: { resolver in
-            return TestImplementation()
-        })
+        container.register(type: TestProtocol.self) { resolver in
+            TestImplementation()
+        }
         let object: TestProtocol? = container.resolve()
         
         XCTAssertNotNil(object)
     }
     
     func testOverrideRegister() {
-        container.register(forType: TestProtocol.self, fabric: { resolver in
-            return TestImplementation()
-        })
-        container.register(forType: TestProtocol.self, fabric: { resolver in
-            return TestOverrideImplementation()
-        })
+        container.register(type: TestProtocol.self) { resolver in
+            TestImplementation()
+        }
+        container.register(type: TestProtocol.self) { resolver in
+            TestOverrideImplementation()
+        }
         let object: TestProtocol? = container.resolve()
         
         XCTAssertNotNil(object)
@@ -42,13 +44,13 @@ final class KOIContainerTests: XCTestCase {
     }
     
     func testOverrideRegisterAfterResolve() {
-        container.register(forType: TestProtocol.self, fabric: { resolver in
-            return TestImplementation()
-        })
+        container.register(type: TestProtocol.self) { resolver in
+            TestImplementation()
+        }
         let _: TestProtocol? = container.resolve()
-        container.register(forType: TestProtocol.self, fabric: { resolver in
-            return TestOverrideImplementation()
-        })
+        container.register(type: TestProtocol.self) { resolver in
+            TestOverrideImplementation()
+        }
         let object: TestProtocol? = container.resolve()
         
         XCTAssertNotNil(object)
@@ -62,8 +64,8 @@ final class KOIContainerTests: XCTestCase {
     }
     
     func testRegisterSeparate() {
-        container.register(forType: TestProtocol.self, scope:.separate) { resolver in
-            return TestImplementation()
+        container.register(type: TestProtocol.self, scope:.separate) { resolver in
+            TestImplementation()
         }
         let object1: TestProtocol? = container.resolve()
         let object2: TestProtocol? = container.resolve()
@@ -79,9 +81,9 @@ final class KOIContainerTests: XCTestCase {
         let arg1: String = "testArg"
         let arg2: Int = 10
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2 in
-            return TestImplementationArgs2(arg1: arg1, arg2: arg2)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1, arg2 in
+            TestImplementationArgs2(arg1: arg1, arg2: arg2)
+        }
         var testProtocol: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2)
         XCTAssertNotNil(testProtocol)
         container.dispose()
@@ -93,9 +95,9 @@ final class KOIContainerTests: XCTestCase {
     func testRegisterWithArg1() {
         let arg1: String = "testArg"
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1 in
-            return TestImplementationArgs1(arg1: arg1)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1 in
+            TestImplementationArgs1(arg1: arg1)
+        }
         let object: TestProtocol? = container.resolve(arg1: arg1)
         
         XCTAssertNotNil(object)
@@ -114,9 +116,9 @@ final class KOIContainerTests: XCTestCase {
         let arg1: String = "testArg"
         let arg2: Int = 10
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2 in
-            return TestImplementationArgs2(arg1: arg1, arg2: arg2)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1, arg2 in
+            TestImplementationArgs2(arg1: arg1, arg2: arg2)
+        }
         let object: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2)
         
         XCTAssertNotNil(object)
@@ -138,9 +140,9 @@ final class KOIContainerTests: XCTestCase {
         let arg2: Int = 10
         let arg3: Double = 10.0
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2, arg3 in
-            return TestImplementationArgs3(arg1: arg1, arg2: arg2, arg3: arg3)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1, arg2, arg3 in
+            TestImplementationArgs3(arg1: arg1, arg2: arg2, arg3: arg3)
+        }
         let object: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2, arg3: arg3)
         
         XCTAssertNotNil(object)
@@ -165,9 +167,9 @@ final class KOIContainerTests: XCTestCase {
         let arg3: Double = 10.5
         let arg4: Float = 5.23
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2, arg3, arg4 in
-            return TestImplementationArgs4(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1, arg2, arg3, arg4 in
+            TestImplementationArgs4(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4)
+        }
         let object: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4)
         
         XCTAssertNotNil(object)
@@ -195,9 +197,9 @@ final class KOIContainerTests: XCTestCase {
         let arg4: Float = 5.23
         let arg5: UInt = 12300
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2, arg3, arg4, arg5 in
-            return TestImplementationArgs5(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1, arg2, arg3, arg4, arg5 in
+            TestImplementationArgs5(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5)
+        }
         let object: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5)
        
         XCTAssertNotNil(object)
@@ -228,9 +230,9 @@ final class KOIContainerTests: XCTestCase {
         let arg5: UInt = 12300
         let arg6: Bool = true
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2, arg3, arg4, arg5, arg6 in
-            return TestImplementationArgs6(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1, arg2, arg3, arg4, arg5, arg6 in
+            TestImplementationArgs6(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6)
+        }
         let object: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6)
        
         XCTAssertNotNil(object)
@@ -264,9 +266,9 @@ final class KOIContainerTests: XCTestCase {
         let arg6: Bool = true
         let arg7: Int16 = 8485
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7 in
-            return TestImplementationArgs7(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7 in
+            TestImplementationArgs7(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7)
+        }
         let object: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7)
         
         XCTAssertNotNil(object)
@@ -303,7 +305,7 @@ final class KOIContainerTests: XCTestCase {
         let arg7: Int16 = -8485
         let arg8: UInt16 = 2343
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 in
+        container.register(type: TestProtocol.self, fabric: { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 in
             return TestImplementationArgs8(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8)
         })
         let object: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8)
@@ -345,9 +347,9 @@ final class KOIContainerTests: XCTestCase {
         let arg8: UInt16 = 2343
         let arg9: Int64 = -23
         
-        container.register(forType: TestProtocol.self, fabric: { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 in
-            return TestImplementationArgs9(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8, arg9: arg9)
-        })
+        container.register(type: TestProtocol.self) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 in
+            TestImplementationArgs9(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8, arg9: arg9)
+        }
         let object: TestProtocol? = container.resolve(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8, arg9: arg9)
         
         XCTAssertNotNil(object)

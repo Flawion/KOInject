@@ -8,25 +8,25 @@
 import Foundation
 
 public protocol KOIRegisterProtocol {
-    func register<RegisterType>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol) -> RegisterType)
+    func register<RegisterType>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol) -> RegisterType)
     
-    func register<RegisterType, Arg1Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type) -> RegisterType)
+    func register<RegisterType, Arg1Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type) -> RegisterType)
     
-    func register<RegisterType, Arg1Type, Arg2Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type) -> RegisterType)
+    func register<RegisterType, Arg1Type, Arg2Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type) -> RegisterType)
     
-    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type) -> RegisterType)
+    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type) -> RegisterType)
     
-    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type) -> RegisterType)
+    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type) -> RegisterType)
     
-    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type) -> RegisterType)
+    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type) -> RegisterType)
     
-    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type) -> RegisterType)
+    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, Arg5Type, Arg6Type) -> RegisterType)
     
-    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type) -> RegisterType)
+    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type) -> RegisterType)
     
-    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type, Arg8Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type, Arg8Type) -> RegisterType)
+    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type, Arg8Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type, Arg8Type) -> RegisterType)
     
-    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type, Arg8Type, Arg9Type>(forType type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type, Arg8Type, Arg9Type) -> RegisterType)
+    func register<RegisterType, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type, Arg8Type, Arg9Type>(type: RegisterType.Type, scope: KOIObjectLifeScopes, fabric: @escaping (KOIResolverProtocol, Arg1Type, Arg2Type, Arg3Type, Arg4Type, ArgType5, Arg6Type, Arg7Type, Arg8Type, Arg9Type) -> RegisterType)
 }
 
 public protocol KOIResolverProtocol {

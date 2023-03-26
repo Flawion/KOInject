@@ -14,7 +14,7 @@ public final class KOIIsolatedResolver<RegisterType> {
         self.lazyResolver = lazyResolver
     }
     
-    public func resolve(withAction action: (RegisterType?)-> Void) {
+    public func resolve(for action: (RegisterType?)-> Void) {
         lazyResolver.resolve()
         action(lazyResolver.object)
         lazyResolver.dispose()

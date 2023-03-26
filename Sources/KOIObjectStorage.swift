@@ -10,7 +10,7 @@ import Foundation
 final class KOIObjectStorage {
     private var sharedObjects: [KOIType: KOIObjectStorageItemProtocol] = [:]
     
-    func removeCache(forType type: KOIType) {
+    func removeCache(for type: KOIType) {
         sharedObjects.removeValue(forKey: type)
     }
     

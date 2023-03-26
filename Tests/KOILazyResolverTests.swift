@@ -20,7 +20,7 @@ final class KOILazyResolverTests: XCTestCase {
     }
     
     func testLazyResolve() {
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver in
+        container.register(type: TestProtocol.self, scope:.shared) { resolver in
             return TestImplementation()
         }
         
@@ -35,8 +35,8 @@ final class KOILazyResolverTests: XCTestCase {
     
     func testLazyResolveWithArg1() {
         let testArg1 = "testArg1"
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1 in
-            return TestImplementationArgs1(arg1: arg1)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1 in
+            TestImplementationArgs1(arg1: arg1)
         }
     
         let lazyResolver = KOILazyResolverArg1(resolver: container, forType: TestProtocol.self, arg1: testArg1)
@@ -52,8 +52,8 @@ final class KOILazyResolverTests: XCTestCase {
     func testLazyResolveWithArg2() {
         let testArg1 = "testArg1"
         let testArg2: Int = 10
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2 in
-            return TestImplementationArgs2(arg1: arg1, arg2: arg2)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2 in
+            TestImplementationArgs2(arg1: arg1, arg2: arg2)
         }
     
         let lazyResolver = KOILazyResolverArg2(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2)
@@ -71,8 +71,8 @@ final class KOILazyResolverTests: XCTestCase {
         let testArg1 = "testArg1"
         let testArg2: Int = 10
         let testArg3: Double = 3.14
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3 in
-            return TestImplementationArgs3(arg1: arg1, arg2: arg2, arg3: arg3)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3 in
+            TestImplementationArgs3(arg1: arg1, arg2: arg2, arg3: arg3)
         }
     
         let lazyResolver = KOILazyResolverArg3(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2, arg3: testArg3)
@@ -92,8 +92,8 @@ final class KOILazyResolverTests: XCTestCase {
         let testArg2: Int = 10
         let testArg3: Double = 3.14
         let testArg4: Float = 2.23
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4 in
-            return TestImplementationArgs4(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4 in
+            TestImplementationArgs4(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4)
         }
     
         let lazyResolver = KOILazyResolverArg4(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2, arg3: testArg3, arg4: testArg4)
@@ -115,8 +115,8 @@ final class KOILazyResolverTests: XCTestCase {
         let testArg3: Double = 3.14
         let testArg4: Float = 2.23
         let testArg5: UInt = 23123213
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5 in
-            return TestImplementationArgs5(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5 in
+            TestImplementationArgs5(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5)
         }
     
         let lazyResolver = KOILazyResolverArg5(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2, arg3: testArg3, arg4: testArg4, arg5: testArg5)
@@ -140,8 +140,8 @@ final class KOILazyResolverTests: XCTestCase {
         let testArg4: Float = 2.23
         let testArg5: UInt = 23123213
         let testArg6: Bool = true
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6 in
-            return TestImplementationArgs6(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6 in
+            TestImplementationArgs6(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6)
         }
     
         let lazyResolver = KOILazyResolverArg6(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2, arg3: testArg3, arg4: testArg4, arg5: testArg5, arg6: testArg6)
@@ -167,8 +167,8 @@ final class KOILazyResolverTests: XCTestCase {
         let testArg5: UInt = 23123213
         let testArg6: Bool = true
         let testArg7: Int16 = 434
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7 in
-            return TestImplementationArgs7(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7 in
+            TestImplementationArgs7(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7)
         }
     
         let lazyResolver = KOILazyResolverArg7(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2, arg3: testArg3, arg4: testArg4, arg5: testArg5, arg6: testArg6, arg7: testArg7)
@@ -196,8 +196,8 @@ final class KOILazyResolverTests: XCTestCase {
         let testArg6: Bool = true
         let testArg7: Int16 = -434
         let testArg8: UInt16 = 2560
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 in
-            return TestImplementationArgs8(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 in
+            TestImplementationArgs8(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8)
         }
     
         let lazyResolver = KOILazyResolverArg8(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2, arg3: testArg3, arg4: testArg4, arg5: testArg5, arg6: testArg6, arg7: testArg7, arg8: testArg8)
@@ -227,8 +227,8 @@ final class KOILazyResolverTests: XCTestCase {
         let testArg7: Int16 = -434
         let testArg8: UInt16 = 2560
         let testArg9: Int64 = -93
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 in
-            return TestImplementationArgs9(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8, arg9: arg9)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 in
+            TestImplementationArgs9(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8, arg9: arg9)
         }
     
         let lazyResolver = KOILazyResolverArg9(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2, arg3: testArg3, arg4: testArg4, arg5: testArg5, arg6: testArg6, arg7: testArg7, arg8: testArg8, arg9: testArg9)

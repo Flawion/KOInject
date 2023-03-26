@@ -20,14 +20,14 @@ final class KOIIsolatedResolverTests: XCTestCase {
         let testArg7: Int16 = -434
         let testArg8: UInt16 = 2560
         let testArg9: Int64 = -93
-        container.register(forType: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 in
-            return TestImplementationArgs9(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8, arg9: arg9)
+        container.register(type: TestProtocol.self, scope:.shared) { resolver, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 in
+            TestImplementationArgs9(arg1: arg1, arg2: arg2, arg3: arg3, arg4: arg4, arg5: arg5, arg6: arg6, arg7: arg7, arg8: arg8, arg9: arg9)
         }
         let lazyResolver = KOILazyResolverArg9(resolver: container, forType: TestProtocol.self, arg1: testArg1, arg2: testArg2, arg3: testArg3, arg4: testArg4, arg5: testArg5, arg6: testArg6, arg7: testArg7, arg8: testArg8, arg9: testArg9)
         
         let isolatedResolver = KOIIsolatedResolver(lazyResolver: lazyResolver)
         XCTAssertNil(lazyResolver.object)
-        isolatedResolver.resolve(withAction: { object in
+        isolatedResolver.resolve(for: { object in
             XCTAssertNotNil(object)
             XCTAssertEqual(testArg1, object?.arg1)
             XCTAssertEqual(testArg2, object?.arg2)
